@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			{% block title %}
+			{% endblock %}
+		</title>
+		<link href='http://fonts.googleapis.com/css?family=Palanquin' rel='stylesheet' type='text/css'>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+		{% block css_files %}
+		{% endblock %}
+        <script src="{% static 'js/lib/jquery/jquery-1.11.3.min.js' %}"></script>
+	</head>
+	<body>
+		<nav id="base_nav">
+			<p class="base_nav_titulo">LOL<span style="color: orangered">SOMALIA</span></p>
+		</nav>
+		<section id="base_contenedor">
+			{% block content %}
+			{% endblock %}
+		</section>
+        <script src="{% static 'js/main.js' %}"></script>
+        {% block js_files %}
+        {% endblock %}
+	</body>
+</html>	
